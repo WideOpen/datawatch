@@ -130,7 +130,7 @@ def update_graph(df):
     dff.plot("date", "overdue", figsize=(7, 4), lw=3)
     plt.ylabel("Overdue dataset")
     plt.xlabel("Date")
-    plt.savefig("output/graph.png")
+    plt.savefig("docs/graph.png")
 
 
 def gse2url(gse):
@@ -160,7 +160,7 @@ def update_html(df, metadb_timestamp):
     final_html = html_template_str % (datetime.date.today(), metadb_timestamp, df.shape[
                                       0], datetime.date.today(), table_html)
 
-    with open("output/index.html", "w") as f:
+    with open("docs/index.html", "w") as f:
         f.write(final_html.encode("utf-8"))
 
 
