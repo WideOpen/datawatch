@@ -1,0 +1,7 @@
+*py[cod]
+__pycache__/
+
+# extra:
+rawdata/*.gz
+rawdata/*.sqlite
+data/*
