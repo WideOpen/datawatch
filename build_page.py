@@ -155,10 +155,12 @@ def update_html(df, metadb_timestamp):
     table_html = df.to_html(formatters={
                             "doi": format_doi, "gse": format_gse}, escape=False, index=False, justify="left")
 
-    html_template_str = open("output_template.html").read()
+    html_template_str = unicode(open("output_template.html").read())
 
-    final_html = html_template_str % (datetime.date.today(), metadb_timestamp, df.shape[
-                                      0], datetime.date.today(), table_html)
+    n_overdue = df.shape[0]
+
+    final_html = html_template_str.format(date_updated=datetime.date.today(), metageo_timestamp=metadb_timestamp,
+                                          n_overdue=n_overdue, table_html=table_html)
 
     with open("docs/index.html", "w") as f:
         f.write(final_html.encode("utf-8"))
