@@ -6,6 +6,7 @@ import zlib
 STR_NOT_FOUND = "Could not find a public or private accession"
 STR_DELETED = "was deleted by the GEO staff"
 STR_PRIVATE = "is currently private and is scheduled to be released"
+STR_WAIT_APPROVAL = "is not yet approved by GEO curators"
 
 
 CREATE_SCRIPT = """
@@ -43,7 +44,7 @@ class GEOCacher(object):
         return data
 
     def check_gse_data(self, data):
-        if STR_PRIVATE in data:
+        if STR_PRIVATE in data or STR_WAIT_APPROVAL in data:
             return "private"
         elif STR_DELETED in data or STR_NOT_FOUND in data:
             return "missing"

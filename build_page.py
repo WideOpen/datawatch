@@ -8,10 +8,10 @@ import seaborn as sns
 from dateutil.parser import parse
 import tqdm
 import sqlite3
+import re
+import argparse
 
 import GEOCacher
-
-import argparse
 
 
 def combine_old_private(df_old, df_private):
@@ -47,7 +47,7 @@ def load_dataframes(maxlag):
     data_db.executescript(prepare_temp_tables)
 
     query_released = """
-    select gse, first_paper, doi, papers.title, first_mentioned, released, journal_nlm from gse_times, papers 
+    select gse, doi, papers.title, first_mentioned, released, journal_nlm from gse_times, papers 
             where
             papers.paperid = gse_times.first_paper
     """
@@ -82,12 +82,23 @@ def load_dataframes(maxlag):
     # df_released.gse[nonreleased]
     df_released = df_released.ix[np.nonzero(statuses_released)[0]]
 
+    today_str = str(datetime.date.today())
     statuses = []
-    for gse in tqdm.tqdm(df_missing.gse):
+    for (i, gse) in enumerate(tqdm.tqdm(df_missing.gse)):
         if gse in skip_gses:
             statuses.append("skip")
         else:
             status = cache.check_gse_cached(gse, maxlag=maxlag)
+            if status == "present":
+                data = cache.get_geo_page(gse, maxlag=maxlag)
+                reldate = re.search("Public on (.*)<", data)
+                if reldate is None:
+                    print "Failed to extract date for ", gse
+                    reldate = today_str
+                else:
+                    reldate = reldate.group(1)
+                df_released = df_released.append({"doi": df_missing.gse[i], "gse": gse, "title": df_missing.title[i], "journal_nlm": df_missing.journal[
+                                                 i], "first_mentioned": df_missing.published_on[i],  "released": reldate}, ignore_index=True)
             statuses.append(status)
 
     df_private = df_missing.ix[np.array(statuses) == "private"]

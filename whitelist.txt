@@ -1,1 +1,4 @@
 GSE17200 # turns out to be a soil type that is mentioned in some paper and misdetected
+GSE0
+GSE00000
+GSE00000000
