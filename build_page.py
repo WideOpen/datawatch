@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib as mpl
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import datetime
@@ -8,6 +10,8 @@ import tqdm
 import sqlite3
 
 import GEOCacher
+
+import argparse
 
 
 def combine_old_private(df_old, df_private):
@@ -35,7 +39,7 @@ CREATE temp table gse_times  AS
 """
 
 
-def load_dataframes():
+def load_dataframes(maxlag):
     print "Loading data..."
     data_db = sqlite3.connect("data/odw.sqlite")
 
@@ -62,7 +66,7 @@ def load_dataframes():
     statuses_released = []
     for (i, gse) in enumerate(tqdm.tqdm(df_released.gse)):
         if df_released.released[i] is None:
-            status = cache.check_gse_cached(gse)
+            status = cache.check_gse_cached(gse, maxlag=maxlag)
             statuses_released.append(False)
             if status == "private":  # append it to df_missing then
                 # Index([u'gse', u'published_on', u'journal', u'doi', u'title'], dtype='object')
@@ -83,7 +87,7 @@ def load_dataframes():
         if gse in skip_gses:
             statuses.append("skip")
         else:
-            status = cache.check_gse_cached(gse)
+            status = cache.check_gse_cached(gse, maxlag=maxlag)
             statuses.append(status)
 
     df_private = df_missing.ix[np.array(statuses) == "private"]
@@ -166,7 +170,12 @@ def update_html(df, metadb_timestamp):
 
 
 def main():
-    df_private, df_released, meta_timestamp = load_dataframes()
+    parser = argparse.ArgumentParser(description='Build a page for datawatch')
+
+    parser.add_argument("--maxlag", default=7)
+    args = parser.parse_args()
+
+    df_private, df_released, meta_timestamp = load_dataframes(args.maxlag)
     combined_df = combine_old_private(df_released, df_private)
     print "Currently missing entries in GEOMetadb: ", df_private.shape[0]
 
