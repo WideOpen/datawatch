@@ -62,8 +62,7 @@ def load_dataframes():
     statuses_released = []
     for (i, gse) in enumerate(tqdm.tqdm(df_released.gse)):
         if df_released.released[i] is None:
-            geo_page = cache.get_geo_page(gse)
-            status = cache.check_gse_data(geo_page)
+            status = cache.check_gse_cached(gse)
             statuses_released.append(False)
             if status == "private":  # append it to df_missing then
                 # Index([u'gse', u'published_on', u'journal', u'doi', u'title'], dtype='object')
@@ -84,8 +83,8 @@ def load_dataframes():
         if gse in skip_gses:
             statuses.append("skip")
         else:
-            geo_page = cache.get_geo_page(gse)
-            statuses.append(cache.check_gse_data(geo_page))
+            status = cache.check_gse_cached(gse)
+            statuses.append(status)
 
     df_private = df_missing.ix[np.array(statuses) == "private"]
     df_private = df_private.sort_values("published_on")

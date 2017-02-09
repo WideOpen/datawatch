@@ -49,3 +49,11 @@ class GEOCacher(object):
             return "missing"
         else:
             return "present"
+
+    def check_gse_cached(self, gse, maxlag=7, skip_present=True):
+        if skip_present:
+            old_data = self.get_geo_page(gse, 365*20)
+            if self.check_gse_data(old_data) == "present":
+                return "present"
+        data = self.get_geo_page(gse, maxlag)
+        return self.check_gse_data(data)
