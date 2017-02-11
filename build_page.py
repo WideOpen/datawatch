@@ -90,7 +90,7 @@ def load_dataframes(maxlag):
         else:
             status = cache.check_gse_cached(gse, maxlag=maxlag)
             if status == "present":
-                data = cache.get_geo_page(gse, maxlag=maxlag)
+                data = cache.get_geo_page(gse, maxlag=99999)
                 reldate = re.search("Public on (.*)<", data)
                 if reldate is None:
                     print "Failed to extract date for ", gse
@@ -142,6 +142,8 @@ def update_graph(df):
 
     sns.set_context("talk")
     dff.plot("date", "overdue", figsize=(7, 4), lw=3)
+    onemonth = datetime.timedelta(30)
+    plt.xlim(dff.date.min(), dff.date.max()+onemonth)
     plt.ylabel("Overdue dataset")
     plt.xlabel("Date")
     plt.savefig("docs/graph.png")
