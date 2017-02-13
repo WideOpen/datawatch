@@ -47,7 +47,7 @@ def load_dataframes(maxlag):
     data_db.executescript(prepare_temp_tables)
 
     query_released = """
-    select gse, doi, papers.title, first_mentioned, released, journal_nlm from gse_times, papers 
+    select gse, doi, papers.title, submitted, first_mentioned, released, journal_nlm from gse_times, papers 
             where
             papers.paperid = gse_times.first_paper
     """
@@ -97,7 +97,7 @@ def load_dataframes(maxlag):
                     reldate = today_str
                 else:
                     reldate = reldate.group(1)
-                df_released = df_released.append({"doi": df_missing.gse[i], "gse": gse, "title": df_missing.title[i], "journal_nlm": df_missing.journal[
+                    df_released = df_released.append({"doi": df_missing.gse[i], "gse": gse, "submitted" : None, "title": df_missing.title[i], "journal_nlm": df_missing.journal[
                                                  i], "first_mentioned": df_missing.published_on[i],  "released": reldate}, ignore_index=True)
             statuses.append(status)
 
@@ -134,9 +134,7 @@ def get_hidden_df(df):
     return pd.DataFrame({"date": x, "overdue": y})
 
 
-def update_graph(df):
-    dff = get_hidden_df(df)
-
+def update_graph(dff):
     sns.set_style("white")
     sns.set_style("ticks")
 
@@ -186,16 +184,22 @@ def main():
     parser = argparse.ArgumentParser(description='Build a page for datawatch')
 
     parser.add_argument("--maxlag", default=7)
+    parser.add_argument("--output", default="")
+
     args = parser.parse_args()
+
 
     df_private, df_released, meta_timestamp = load_dataframes(args.maxlag)
     combined_df = combine_old_private(df_released, df_private)
     print "Currently missing entries in GEOMetadb: ", df_private.shape[0]
-
-    # combined_df.to_csv("output/combined_data.csv")
+    graph_df = get_hidden_df(combined_df)
+    if args.output != "":
+        combined_df.to_csv(args.output + "_combined.csv", encoding='utf-8')
+        df_released.to_csv(args.output + "_released.csv", encoding='utf-8')
+        graph_df.to_csv(args.output + "_graph.csv", encoding='utf-8')
 
     update_html(df_private, meta_timestamp)
-    update_graph(combined_df)
+    update_graph(graph_df)
 
 if __name__ == "__main__":
     main()
