@@ -114,7 +114,7 @@ def load_dataframes(maxlag):
 def get_hidden_df(df):
     df = df.copy()
     oneday = datetime.timedelta(1)
-    onemonth = datetime.timedelta(30)
+    onemonth = datetime.timedelta(5)
     x = []
     y = []
     c = datetime.date.today() - oneday
@@ -139,7 +139,7 @@ def update_graph(dff):
     sns.set_style("ticks")
 
     sns.set_context("talk")
-    dff.plot("date", "overdue", figsize=(7, 4), lw=3)
+    dff.ix[::5].plot("date", "overdue", figsize=(7, 4), lw=3)
     onemonth = datetime.timedelta(30)
     plt.xlim(dff.date.min(), dff.date.max()+onemonth)
     plt.ylabel("Overdue dataset")

@@ -3,3 +3,20 @@ GSE0
 GSE00000
 GSE00000000
 GSE1124 # false positive in 10.1523/ENEURO.0240-16.2016	
+GSE59498                author typo (GSE59493 correct, erratum published in PMC4373767)
+GSE62541                author typo (GSE62514 correct)
+GSE70780                author typo (GSE70680 correct)
+GSE73448                author typo (GSE73348 correct)
+GSE77446                author typo (GSE77466 correct)
+GSE87521                author typo (GSE78521 correct)
+GSE83480                author typo (GSE83084 correct)
+GSE86632                author typo (GSE86332 correct)
+GSE58046                author typo (they meant to cite Platform GPL18735)
+GSE74516                author typo, can't find real accession
+GSE15252                incomplete submission, unresponsive submitter
+GSE17443                incomplete submission, unresponsive submitter
+GSE89278                pending as submitter investigates possible patient privacy issue
+GSE20865                third-party typo (GSE20685 likely correct)
+GSE94115                third-party typo (GSE4115 likely correct)
+GSE41308                third-party typo (GSE41313 likely correct)
+GSE84318                third-party typo (GSE64318 likely correct)
