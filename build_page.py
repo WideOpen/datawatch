@@ -163,6 +163,19 @@ def format_doi(doi):
     return """<a href="%s">%s</a>""" % (doi2url(doi), doi)
 
 
+tracking_script = """
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93388605-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+"""
+
 def update_html(df, metadb_timestamp):
 
     pd.set_option('display.max_colwidth', -1)
@@ -174,7 +187,7 @@ def update_html(df, metadb_timestamp):
     n_overdue = df.shape[0]
 
     final_html = html_template_str.format(date_updated=datetime.date.today(), metageo_timestamp=metadb_timestamp,
-                                          n_overdue=n_overdue, table_html=table_html)
+                                          n_overdue=n_overdue, table_html=table_html, tracking_script=tracking_script)
 
     with open("docs/index.html", "w") as f:
         f.write(final_html.encode("utf-8"))
