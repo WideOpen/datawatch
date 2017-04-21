@@ -23,19 +23,19 @@ def combine_old_private(df_old, df_private):
 
 
 prepare_temp_tables = """
-CREATE temp table  first_mention  as 
-    select m.gse, p.paperid 
+CREATE temp table  first_mention  as
+    select m.acc, p.paperid
         from mentions m, papers p
-           where m.paperid = p.paperid and p.published_on = 
-                (select min(published_on) from papers p, mentions m0 where p.paperid=m0.paperid and m0.gse = m.gse);
+           where m.paperid = p.paperid and p.published_on =
+                (select min(published_on) from papers p, mentions m0 where p.paperid=m0.paperid and m0.acc = m.acc);
 
-CREATE index temp.first_mention_gse_idx on first_mention(gse);
+CREATE index temp.first_mention_acc_idx on first_mention(acc);
 
-CREATE temp table gse_times  AS 
-  select ds.gse, ds.first_submitted_on as submitted, ds.first_public_on as released, p.published_on as first_mentioned, ds.title, m.paperid as first_paper
-  from datasets ds 
-        left join first_mention m on m.gse = ds.gse
-        left join papers p on p.paperid = m.paperid;
+CREATE temp table gse_times  AS
+  select ds.acc, ds.first_submitted_on as submitted, ds.first_public_on as released, p.published_on as first_mentioned, ds.title, m.paperid as first_paper
+  from datasets ds
+        left join first_mention m on m.acc = ds.acc
+        left join papers p on p.paperid = m.paperid where m.acc GLOB 'GSE*';
 """
 
 
@@ -44,18 +44,21 @@ def load_dataframes(maxlag):
     data_db = sqlite3.connect("data/odw.sqlite")
 
     cache = GEOCacher.GEOCacher("data/cache.sqlite")
+    print "Preparing extra tables...  ",
     data_db.executescript(prepare_temp_tables)
+    print "done"
 
     query_released = """
-    select gse, doi, papers.title, submitted, first_mentioned, released, journal_nlm from gse_times, papers 
+    select acc as gse, doi, papers.title, submitted, first_mentioned, released, journal_nlm from gse_times, papers
             where
             papers.paperid = gse_times.first_paper
     """
     df_released = pd.read_sql_query(query_released, data_db)
 
-    query_private = """select distinct gse, published_on, journal_nlm as journal, 
-                    doi, title from mentions, papers 
-                        where gse not in (select gse from datasets) and mentions.paperid=papers.paperid
+    query_private = """select distinct acc as gse, published_on, journal_nlm as journal,
+                    doi, title from mentions, papers
+                        where gse not in (select acc from datasets) and mentions.paperid=papers.paperid
+                        and mentions.acc GLOB 'GSE*'
                         order by published_on asc"""
     df_missing = pd.read_sql_query(query_private, data_db)
 

@@ -70,11 +70,11 @@ def insert_data(dbcon, all_gse, all_results):
     cur = dbcon.cursor()
     for gse in tqdm.tqdm(all_gse):
         (submitted, released, pmid, title) = all_results[gse]
-        cur.execute("SELECT * FROM datasets where gse=?", (gse,))
+        cur.execute("SELECT * FROM datasets where acc=?", (gse,))
         data = cur.fetchall()
         if len(data) > 0:
             continue
-        cur.execute("INSERT INTO datasets (gse, title, first_public_on, first_submitted_on, pmid_ref) VALUES (?, ?, ?, ?, ?)",
+        cur.execute("INSERT INTO datasets (acc, title, first_public_on, first_submitted_on, pmid_ref) VALUES (?, ?, ?, ?, ?)",
                     (gse, title, released, submitted, pmid))
     dbcon.commit()
     cur.close()
@@ -92,12 +92,12 @@ def insert_data(dbcon, all_gse, all_results):
         paperid = data[0][0]
 
         cur.execute(
-            "SELECT * from mentions where gse=? and paperid=?", (gse, paperid))
+            "SELECT * from mentions where acc=? and paperid=?", (gse, paperid))
         data = cur.fetchall()
         if len(data) == 0:
             added += 1
             cur.execute(
-                "INSERT into mentions (gse, paperid) values (?, ?)", (gse, paperid))
+                "INSERT into mentions (acc, paperid) values (?, ?)", (gse, paperid))
     dbcon.commit()
     cur.close()
 

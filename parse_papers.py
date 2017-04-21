@@ -147,7 +147,15 @@ def parse_file(data):
 
 
 gse_expr = re.compile("GSE[0-9]+")
+srx_expr = re.compile("SRX[0-9]+")
 
+all_accessions_regexps = [gse_expr, srx_expr]
+
+def find_accs(text):
+    result = []
+    for r in all_accessions_regexps:
+        result.extend(r.findall(text))
+    return result
 
 def process_tar_file(fn):
     tf = tarfile.open(fn, "r")
@@ -155,11 +163,11 @@ def process_tar_file(fn):
     for m in tqdm.tqdm(tf):
         if m.isfile():
             data = tf.extractfile(m).read()
-            all_gses = gse_expr.findall(data)
-            if len(all_gses) == 0:
+            all_accs = find_accs(data)
+            if len(all_accs) == 0:
                 continue
             result = parse_file(data)
-            result["gses"] = list(set(all_gses))
+            result["gses"] = list(set(all_accs))
             all_results.append(result)
     tf.close()
     return all_results
@@ -177,18 +185,18 @@ def setup_db(dbcon):
 -- core tables
 create table authors(authorid integer primary key, name text);
 create table papers(paperid integer primary key, title text, doi text UNIQUE, pmid integer UNIQUE, pmc integer UNIQUE, published_on date, journal_nlm text);
-create table datasets(gse text primary key, title text, first_public_on date, first_submitted_on date, pmid_ref integer);
+create table datasets(acc text primary key, title text, first_public_on date, first_submitted_on date, pmid_ref integer);
 
 create table authorof(authorid int not null, paperid int not null);
-create table mentions(paperid int not null, gse text not null);
+create table mentions(paperid int not null, acc text not null);
 
 
 create index authors_name_idx on authors(name);
 create index mentions_paperid_idx on mentions(paperid);
-create index mentions_gse_idx on mentions(gse);
+create index mentions_acc_idx on mentions(acc);
 create index authorof_authorid_idx on authorof(authorid);
 create index authorof_paperid_idx on authorof(paperid);
-        
+
 PRAGMA synchronous=OFF;
 """)
 
@@ -252,7 +260,7 @@ def try_insert_paper(dbcon, paper):
 
         for gse in paper["gses"]:
             cur.execute(
-                "insert into mentions(paperid, gse) values (?, ?)", (paperid, gse))
+                "insert into mentions(paperid, acc) values (?, ?)", (paperid, gse))
     # dbcon.commit()
     return paperid
 
