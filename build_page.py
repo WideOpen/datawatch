@@ -183,7 +183,7 @@ def update_html(df, metadb_timestamp):
 
     pd.set_option('display.max_colwidth', -1)
     table_html = df.to_html(formatters={
-                            "doi": format_doi, "gse": format_gse}, escape=False, index=False, justify="left")
+                            "doi": format_doi, "gse": format_gse}, escape=False, index=False, justify="left", classes="table table-striped table-bordered")
 
     html_template_str = unicode(open("output_template.html").read())
 
