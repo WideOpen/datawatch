@@ -1,17 +1,21 @@
+<!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<title>
-Open Science Data Watch
-</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>
+    Open Science Data Watch
+  </title>
 </head>
+
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="navbar-header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -19,30 +23,37 @@ Open Science Data Watch
         <span class="icon-bar"></span>
       </button>
 
-  <a class="navbar-brand" href="#">WideOpen</a>
-  </div>
-
-    <div id="navbar" class="collapse navbar-collapse">
+        <a class="navbar-brand" href="#">WideOpen</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-          <li ><a href="index.html">GEO</a></li>
-          <li class="active"><a  href="sra.html">SRA</a></li>
+          <li><a href="index.html">GEO</a></li>
+          <li class="active"><a href="sra.html">SRA</a></li>
         </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<div class="container">
-<center>
-<h1> Datasets overdue for publication in SRA repository </h1>
-<h3> Updated: 2017-03-07 </h3>
-<h4>Waiting for 84 datasets as of 2017-03-07:</h4>
-<center>
-<table border="1" class="dataframe table table-bordered table-striped">
+  <div class="container">
+    <div class="content">
+      <center>
+        <h1> Datasets overdue for publication in SRA repository </h1>
+        <h3> Updated: 2017-05-16 </h3>
+        <br> An "overdue" dataset is one that is still has yet to be made public even after the first detected reference in a publication.
+        <br>
+        <br> Using data from <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-19">SRAdb</a> with timestamp: 2017-04-21 23:10:00
+        <br>
+      </center>
+      <br/><br/>
+      <h4>Waiting for 63 datasets as of 2017-05-16:</h4>
+      <center>
+        <table border="1" class="dataframe table table-striped table-bordered">
   <thead>
-    <tr style="text-align: center;">
+    <tr style="text-align: left;">
       <th>srx</th>
       <th>published_on</th>
-      <th>doi</th>
       <th>journal</th>
+      <th>doi</th>
       <th>title</th>
     </tr>
   </thead>
@@ -50,595 +61,451 @@ Open Science Data Watch
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX048641">SRX048641</a></td>
       <td>2011-10-17</td>
-      <td><a href="http://dx.doi.org/10.1186/gb-2011-12-10-r100">10.1186/gb-2011-12-10-r100</a></td>
       <td>Genome Biol</td>
+      <td><a href="http://dx.doi.org/10.1186/gb-2011-12-10-r100">10.1186/gb-2011-12-10-r100</a></td>
       <td>Comparative genomics of the pathogenic ciliate Ichthyophthirius multifiliis, its free-living relatives and a host species provide insights into adoption of a parasitic lifestyle and prospects for disease control</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX017292">SRX017292</a></td>
       <td>2011-11-24</td>
-      <td><a href="http://dx.doi.org/10.1093/gbe/evr127">10.1093/gbe/evr127</a></td>
       <td>Genome Biol Evol</td>
+      <td><a href="http://dx.doi.org/10.1093/gbe/evr127">10.1093/gbe/evr127</a></td>
       <td>First Complete Mitochondrial Genome Sequence from a Box Jellyfish Reveals a Highly Fragmented Linear Architecture and Insights into Telomere Evolution</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX063443">SRX063443</a></td>
       <td>2011-11-24</td>
-      <td><a href="http://dx.doi.org/10.1093/gbe/evr127">10.1093/gbe/evr127</a></td>
       <td>Genome Biol Evol</td>
+      <td><a href="http://dx.doi.org/10.1093/gbe/evr127">10.1093/gbe/evr127</a></td>
       <td>First Complete Mitochondrial Genome Sequence from a Box Jellyfish Reveals a Highly Fragmented Linear Architecture and Insights into Telomere Evolution</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX098091">SRX098091</a></td>
       <td>2012-03-12</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0032973">10.1371/journal.pone.0032973</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0032973">10.1371/journal.pone.0032973</a></td>
       <td>Transposable Elements Are a Major Cause of Somatic Polymorphism in Vitis vinifera L.</td>
     </tr>
     <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX037802">SRX037802</a></td>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX021348">SRX021348</a></td>
       <td>2012-06-13</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
       <td>PLoS One</td>
-      <td>Inflammatory Bowel Diseases Phenotype, C. difficile and NOD2 Genotype Are Associated with Shifts in Human Ileum Associated Microbial Composition</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX037800">SRX037800</a></td>
-      <td>2012-06-13</td>
       <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
-      <td>PLoS One</td>
       <td>Inflammatory Bowel Diseases Phenotype, C. difficile and NOD2 Genotype Are Associated with Shifts in Human Ileum Associated Microbial Composition</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX021368">SRX021368</a></td>
       <td>2012-06-13</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
+      <td>Inflammatory Bowel Diseases Phenotype, C. difficile and NOD2 Genotype Are Associated with Shifts in Human Ileum Associated Microbial Composition</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX037800">SRX037800</a></td>
+      <td>2012-06-13</td>
+      <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
+      <td>Inflammatory Bowel Diseases Phenotype, C. difficile and NOD2 Genotype Are Associated with Shifts in Human Ileum Associated Microbial Composition</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX037802">SRX037802</a></td>
+      <td>2012-06-13</td>
+      <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0026284">10.1371/journal.pone.0026284</a></td>
       <td>Inflammatory Bowel Diseases Phenotype, C. difficile and NOD2 Genotype Are Associated with Shifts in Human Ileum Associated Microbial Composition</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX105348">SRX105348</a></td>
       <td>2012-09-13</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0042304">10.1371/journal.pone.0042304</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0042304">10.1371/journal.pone.0042304</a></td>
       <td>An Integrated Pipeline for de Novo Assembly of Microbial Genomes</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX158077">SRX158077</a></td>
       <td>2013-01-23</td>
-      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>Genome reannotation of the lizard Anolis carolinensis based on 14 adult and embryonic deep transcriptomes</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX158076">SRX158076</a></td>
       <td>2013-01-23</td>
-      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>Genome reannotation of the lizard Anolis carolinensis based on 14 adult and embryonic deep transcriptomes</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX158074">SRX158074</a></td>
       <td>2013-01-23</td>
-      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/1471-2164-14-49">10.1186/1471-2164-14-49</a></td>
       <td>Genome reannotation of the lizard Anolis carolinensis based on 14 adult and embryonic deep transcriptomes</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX347875">SRX347875</a></td>
       <td>2014-02-24</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0089473">10.1371/journal.pone.0089473</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0089473">10.1371/journal.pone.0089473</a></td>
       <td>Modulation of Anopheles stephensi Gene Expression by Nitroquine, an Antimalarial Drug against Plasmodium yoelii Infection in the Mosquito</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX482108">SRX482108</a></td>
       <td>2014-07-09</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0101674">10.1371/journal.pone.0101674</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0101674">10.1371/journal.pone.0101674</a></td>
       <td>Increasing Maternal or Post-Weaning Folic Acid Alters Gene Expression and Moderately Changes Behavior in the Offspring</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX180597">SRX180597</a></td>
       <td>2014-12-03</td>
-      <td><a href="http://dx.doi.org/10.1186/s13059-014-0506-z">10.1186/s13059-014-0506-z</a></td>
       <td>Genome Biol</td>
+      <td><a href="http://dx.doi.org/10.1186/s13059-014-0506-z">10.1186/s13059-014-0506-z</a></td>
       <td>Whole genome de novo assemblies of three divergent strains of rice, Oryza sativa, document novel gene space of aus and indica</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX671574">SRX671574</a></td>
       <td>2014-12-04</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0114461">10.1371/journal.pone.0114461</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0114461">10.1371/journal.pone.0114461</a></td>
       <td>Inference of the Oxidative Stress Network in Anopheles stephensi upon Plasmodium Infection</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX520161">SRX520161</a></td>
       <td>2015-02-26</td>
-      <td><a href="http://dx.doi.org/10.7717/peerj.793">10.7717/peerj.793</a></td>
       <td>PeerJ</td>
+      <td><a href="http://dx.doi.org/10.7717/peerj.793">10.7717/peerj.793</a></td>
       <td>Comparative genomics and phylogenetic discordance of cultivated tomato and close wild relatives</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX521582">SRX521582</a></td>
       <td>2015-02-26</td>
-      <td><a href="http://dx.doi.org/10.7717/peerj.793">10.7717/peerj.793</a></td>
       <td>PeerJ</td>
+      <td><a href="http://dx.doi.org/10.7717/peerj.793">10.7717/peerj.793</a></td>
       <td>Comparative genomics and phylogenetic discordance of cultivated tomato and close wild relatives</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX681749">SRX681749</a></td>
       <td>2015-03-13</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0119153">10.1371/journal.pone.0119153</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0119153">10.1371/journal.pone.0119153</a></td>
       <td>Transcriptome Sequence Analysis of an Ornamental Plant, Ananas comosus var. bracteatus, Revealed the Potential Unigenes Involved in Terpenoid and Phenylpropanoid Biosynthesis</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX973396">SRX973396</a></td>
       <td>2015-05-06</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-015-1553-x">10.1186/s12864-015-1553-x</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12864-015-1553-x">10.1186/s12864-015-1553-x</a></td>
       <td>Transcriptome assembly, profiling and differential gene expression analysis of the halophyte Suaeda fruticosa provides insights into salt tolerance</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX976443">SRX976443</a></td>
       <td>2015-05-07</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-015-1555-8">10.1186/s12864-015-1555-8</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12864-015-1555-8">10.1186/s12864-015-1555-8</a></td>
       <td>An empirical strategy to detect bacterial transcript structure from directional RNA-seq transcriptome data</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX542125">SRX542125</a></td>
       <td>2015-07-24</td>
+      <td>PLoS One</td>
       <td><a href="http://dx.doi.org/10.1371/journal.pone.0133705">10.1371/journal.pone.0133705</a></td>
-      <td>PLoS One</td>
       <td>A Genomic, Transcriptomic and Proteomic Look at the GE2270 Producer Planobispora rosea, an Uncommon Actinomycete</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1140360">SRX1140360</a></td>
-      <td>2015-09-02</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-015-1842-4">10.1186/s12864-015-1842-4</a></td>
-      <td>BMC Genomics</td>
-      <td>De novo sequencing and analysis of the cranberry fruit transcriptome to identify putative genes involved in flavonoid biosynthesis, transport and regulation</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1140359">SRX1140359</a></td>
-      <td>2015-09-02</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-015-1842-4">10.1186/s12864-015-1842-4</a></td>
-      <td>BMC Genomics</td>
-      <td>De novo sequencing and analysis of the cranberry fruit transcriptome to identify putative genes involved in flavonoid biosynthesis, transport and regulation</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1253908">SRX1253908</a></td>
-      <td>2015-11-02</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0141761">10.1371/journal.pone.0141761</a></td>
-      <td>PLoS One</td>
-      <td>RNA-Seq SSRs of Moth Orchid and Screening for Molecular Markers across Genus Phalaenopsis (Orchidaceae)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1253909">SRX1253909</a></td>
       <td>2015-11-02</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0141761">10.1371/journal.pone.0141761</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0141761">10.1371/journal.pone.0141761</a></td>
       <td>RNA-Seq SSRs of Moth Orchid and Screening for Molecular Markers across Genus Phalaenopsis (Orchidaceae)</td>
     </tr>
     <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459736">SRX1459736</a></td>
-      <td>2015-12-18</td>
-      <td><a href="http://dx.doi.org/10.1016/j.gdata.2015.12.004">10.1016/j.gdata.2015.12.004</a></td>
-      <td>Genom Data</td>
-      <td>Structural insights of microbial community of Deulajhari (India) hot spring using 16s-rRNA based metagenomic sequencing</td>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1253908">SRX1253908</a></td>
+      <td>2015-11-02</td>
+      <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0141761">10.1371/journal.pone.0141761</a></td>
+      <td>RNA-Seq SSRs of Moth Orchid and Screening for Molecular Markers across Genus Phalaenopsis (Orchidaceae)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX750575">SRX750575</a></td>
       <td>2016-01-05</td>
-      <td><a href="http://dx.doi.org/10.1038/ncomms10281">10.1038/ncomms10281</a></td>
       <td>Nat Commun</td>
+      <td><a href="http://dx.doi.org/10.1038/ncomms10281">10.1038/ncomms10281</a></td>
       <td>Stepwise B-cell-dependent expansion of T helper clonotypes diversifies the T-cell response</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459732">SRX1459732</a></td>
-      <td>2016-01-07</td>
-      <td><a href="http://dx.doi.org/10.1016/j.gdata.2016.01.004">10.1016/j.gdata.2016.01.004</a></td>
-      <td>Genom Data</td>
-      <td>Profiling of microbial community of Odisha hot spring based on metagenomic sequencing</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459733">SRX1459733</a></td>
-      <td>2016-01-07</td>
-      <td><a href="http://dx.doi.org/10.1016/j.gdata.2016.01.004">10.1016/j.gdata.2016.01.004</a></td>
-      <td>Genom Data</td>
-      <td>Profiling of microbial community of Odisha hot spring based on metagenomic sequencing</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459735">SRX1459735</a></td>
-      <td>2016-01-16</td>
-      <td><a href="http://dx.doi.org/10.1016/j.gdata.2016.01.011">10.1016/j.gdata.2016.01.011</a></td>
-      <td>Genom Data</td>
-      <td>Investigation of the microbial community in the Odisha hot spring cluster based on the cultivation independent approach</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459734">SRX1459734</a></td>
-      <td>2016-01-16</td>
-      <td><a href="http://dx.doi.org/10.1016/j.gdata.2016.01.011">10.1016/j.gdata.2016.01.011</a></td>
-      <td>Genom Data</td>
-      <td>Investigation of the microbial community in the Odisha hot spring cluster based on the cultivation independent approach</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1459983">SRX1459983</a></td>
       <td>2016-02-05</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0147530">10.1371/journal.pone.0147530</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0147530">10.1371/journal.pone.0147530</a></td>
       <td>Genome Survey Sequencing for the Characterization of the Genetic Background of Rosa roxburghii Tratt and Leaf Ascorbate Metabolism Genes</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1054896">SRX1054896</a></td>
       <td>2016-03-08</td>
-      <td><a href="http://dx.doi.org/10.1038/ismej.2016.31">10.1038/ismej.2016.31</a></td>
       <td>ISME J</td>
+      <td><a href="http://dx.doi.org/10.1038/ismej.2016.31">10.1038/ismej.2016.31</a></td>
       <td>Local diversity of heathland Cercozoa explored by in-depth sequencing</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1471864">SRX1471864</a></td>
       <td>2016-03-18</td>
-      <td><a href="http://dx.doi.org/10.1093/gbe/evw016">10.1093/gbe/evw016</a></td>
       <td>Genome Biol Evol</td>
+      <td><a href="http://dx.doi.org/10.1093/gbe/evw016">10.1093/gbe/evw016</a></td>
       <td>Horizontal Gene Acquisitions, Mobile Element Proliferation, and Genome Decay in the Host-Restricted Plant Pathogen Erwinia Tracheiphila</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1608467">SRX1608467</a></td>
       <td>2016-05-03</td>
-      <td><a href="http://dx.doi.org/10.3389/fnins.2016.00168">10.3389/fnins.2016.00168</a></td>
       <td>Front Neurosci</td>
+      <td><a href="http://dx.doi.org/10.3389/fnins.2016.00168">10.3389/fnins.2016.00168</a></td>
       <td>DNA Methylation Profiling at Single-Base Resolution Reveals Gestational Folic Acid Supplementation Influences the Epigenome of Mouse Offspring Cerebellum</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1680021">SRX1680021</a></td>
-      <td>2016-05-09</td>
-      <td><a href="http://dx.doi.org/10.1534/g3.116.029793">10.1534/g3.116.029793</a></td>
-      <td>G3 (Bethesda)</td>
-      <td>Transcriptomic Analysis Identifies Candidate Genes Related to Intramuscular Fat Deposition and Fatty Acid Composition in the Breast Muscle of Squabs (Columba)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1675529">SRX1675529</a></td>
       <td>2016-05-09</td>
-      <td><a href="http://dx.doi.org/10.1038/nmeth.3865">10.1038/nmeth.3865</a></td>
       <td>Nat Methods</td>
+      <td><a href="http://dx.doi.org/10.1038/nmeth.3865">10.1038/nmeth.3865</a></td>
       <td>A Hybrid Approach for de novo Human Genome Sequence Assembly and Phasing</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1680021">SRX1680021</a></td>
+      <td>2016-05-09</td>
+      <td>G3 (Bethesda)</td>
+      <td><a href="http://dx.doi.org/10.1534/g3.116.029793">10.1534/g3.116.029793</a></td>
+      <td>Transcriptomic Analysis Identifies Candidate Genes Related to Intramuscular Fat Deposition and Fatty Acid Composition in the Breast Muscle of Squabs (Columba)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1680022">SRX1680022</a></td>
       <td>2016-05-09</td>
-      <td><a href="http://dx.doi.org/10.1534/g3.116.029793">10.1534/g3.116.029793</a></td>
       <td>G3 (Bethesda)</td>
+      <td><a href="http://dx.doi.org/10.1534/g3.116.029793">10.1534/g3.116.029793</a></td>
       <td>Transcriptomic Analysis Identifies Candidate Genes Related to Intramuscular Fat Deposition and Fatty Acid Composition in the Breast Muscle of Squabs (Columba)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX122629">SRX122629</a></td>
       <td>2016-05-25</td>
-      <td><a href="http://dx.doi.org/10.7554/eLife.10607">10.7554/eLife.10607</a></td>
       <td>eLife</td>
+      <td><a href="http://dx.doi.org/10.7554/eLife.10607">10.7554/eLife.10607</a></td>
       <td>PHF13 is a molecular reader and transcriptional co-regulator of H3K4me2/3</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752603">SRX1752603</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752602">SRX1752602</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752601">SRX1752601</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752600">SRX1752600</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752604">SRX1752604</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752589">SRX1752589</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752590">SRX1752590</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752592">SRX1752592</a></td>
-      <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
-      <td>PLoS Pathog</td>
-      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1757519">SRX1757519</a></td>
       <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1757517">SRX1757517</a></td>
       <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752601">SRX1752601</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752603">SRX1752603</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752602">SRX1752602</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752590">SRX1752590</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752592">SRX1752592</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752599">SRX1752599</a></td>
       <td>2016-07-18</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752600">SRX1752600</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
+      <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1752604">SRX1752604</a></td>
+      <td>2016-07-18</td>
+      <td>PLoS Pathog</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.ppat.1005762">10.1371/journal.ppat.1005762</a></td>
       <td>Epigenetic Switch Driven by DNA Inversions Dictates Phase Variation in Streptococcus pneumoniae</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1447227">SRX1447227</a></td>
       <td>2016-07-26</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0159719">10.1371/journal.pone.0159719</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0159719">10.1371/journal.pone.0159719</a></td>
       <td>Deciphering Transcriptome and Complex Alternative Splicing Transcripts in Mammary Gland Tissues from Cows Naturally Infected with Staphylococcus aureus Mastitis</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX999959">SRX999959</a></td>
       <td>2016-07-27</td>
-      <td><a href="http://dx.doi.org/10.1111/age.12465">10.1111/age.12465</a></td>
       <td>Anim Genet</td>
+      <td><a href="http://dx.doi.org/10.1111/age.12465">10.1111/age.12465</a></td>
       <td>Genome‐wide genetic variation discovery in Chinese Taihu pig breeds using next generation sequencing</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1722232">SRX1722232</a></td>
       <td>2016-08-17</td>
-      <td><a href="http://dx.doi.org/10.1038/srep31516">10.1038/srep31516</a></td>
       <td>Sci Rep</td>
-      <td>Systematic evaluation of sericin protein as a substitute for fetal bovine serum in cell culture</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1722231">SRX1722231</a></td>
-      <td>2016-08-17</td>
       <td><a href="http://dx.doi.org/10.1038/srep31516">10.1038/srep31516</a></td>
-      <td>Sci Rep</td>
       <td>Systematic evaluation of sericin protein as a substitute for fetal bovine serum in cell culture</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1722219">SRX1722219</a></td>
       <td>2016-08-17</td>
-      <td><a href="http://dx.doi.org/10.1038/srep31516">10.1038/srep31516</a></td>
       <td>Sci Rep</td>
-      <td>Systematic evaluation of sericin protein as a substitute for fetal bovine serum in cell culture</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1722218">SRX1722218</a></td>
-      <td>2016-08-17</td>
       <td><a href="http://dx.doi.org/10.1038/srep31516">10.1038/srep31516</a></td>
-      <td>Sci Rep</td>
-      <td>Systematic evaluation of sericin protein as a substitute for fetal bovine serum in cell culture</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1722229">SRX1722229</a></td>
-      <td>2016-08-17</td>
-      <td><a href="http://dx.doi.org/10.1038/srep31516">10.1038/srep31516</a></td>
-      <td>Sci Rep</td>
       <td>Systematic evaluation of sericin protein as a substitute for fetal bovine serum in cell culture</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1771615">SRX1771615</a></td>
       <td>2016-08-24</td>
+      <td>Front Plant Sci</td>
       <td><a href="http://dx.doi.org/10.3389/fpls.2016.01267">10.3389/fpls.2016.01267</a></td>
-      <td>Front Plant Sci</td>
       <td>Transcriptome Dataset of Halophyte Beach Morning Glory, a Close Wild Relative of Sweet Potato</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1741570">SRX1741570</a></td>
-      <td>2016-08-30</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.01310">10.3389/fpls.2016.01310</a></td>
-      <td>Front Plant Sci</td>
-      <td>Construction of a High-Density Genetic Map Based on Large-Scale Marker Development in Mango Using Specific-Locus Amplified Fragment Sequencing (SLAF-seq)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2030658">SRX2030658</a></td>
       <td>2016-08-30</td>
-      <td><a href="http://dx.doi.org/10.1186/s13227-016-0058-2">10.1186/s13227-016-0058-2</a></td>
       <td>EvoDevo</td>
+      <td><a href="http://dx.doi.org/10.1186/s13227-016-0058-2">10.1186/s13227-016-0058-2</a></td>
       <td>Molecular regionalization in the compact brain of the meiofaunal annelid Dinophilus gyrociliatus (Dinophilidae)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1992289">SRX1992289</a></td>
       <td>2016-09-05</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.01307">10.3389/fpls.2016.01307</a></td>
       <td>Front Plant Sci</td>
+      <td><a href="http://dx.doi.org/10.3389/fpls.2016.01307">10.3389/fpls.2016.01307</a></td>
       <td>Transcriptomics and Metabolite Analysis Reveals the Molecular Mechanism of Anthocyanin Biosynthesis Branch Pathway in Different Senecio cruentus Cultivars</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1651783">SRX1651783</a></td>
-      <td>2016-09-14</td>
-      <td><a href="http://dx.doi.org/10.3389/fmicb.2016.01443">10.3389/fmicb.2016.01443</a></td>
-      <td>Front Microbiol</td>
-      <td>Transcription Profiling Analysis of Mango–Fusarium mangiferae Interaction</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1672963">SRX1672963</a></td>
-      <td>2016-09-15</td>
-      <td><a href="http://dx.doi.org/10.1038/srep33296">10.1038/srep33296</a></td>
-      <td>Sci Rep</td>
-      <td>Global analysis of differential gene expression related to long-term sperm storage in oviduct of Chinese Soft-Shelled Turtle Pelodiscus sinensis</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1675543">SRX1675543</a></td>
-      <td>2016-09-15</td>
-      <td><a href="http://dx.doi.org/10.1038/srep33296">10.1038/srep33296</a></td>
-      <td>Sci Rep</td>
-      <td>Global analysis of differential gene expression related to long-term sperm storage in oviduct of Chinese Soft-Shelled Turtle Pelodiscus sinensis</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1736990">SRX1736990</a></td>
-      <td>2016-09-29</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0163590">10.1371/journal.pone.0163590</a></td>
-      <td>PLoS One</td>
-      <td>Alternative Isoform Analysis of Ttc8 Expression in the Rat Pineal Gland Using a Multi-Platform Sequencing Approach Reveals Neural Regulation</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1715113">SRX1715113</a></td>
-      <td>2016-10-06</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3122-3">10.1186/s12864-016-3122-3</a></td>
-      <td>BMC Genomics</td>
-      <td>Multi-omics analysis reveals regulators of the response to PDGF-BB treatment in pulmonary artery smooth muscle cells</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1687039">SRX1687039</a></td>
-      <td>2016-11-07</td>
-      <td><a href="http://dx.doi.org/10.1038/srep36753">10.1038/srep36753</a></td>
-      <td>Sci Rep</td>
-      <td>Transcriptomic analysis on the formation of the viable putative non-culturable state of beer-spoilage Lactobacillus acetotolerans</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1521275">SRX1521275</a></td>
-      <td>2016-11-17</td>
-      <td><a href="http://dx.doi.org/10.1038/srep37302">10.1038/srep37302</a></td>
-      <td>Sci Rep</td>
-      <td>Genetic determination of the enhanced drought resistance of rice maintainer HuHan2B by pedigree breeding</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1521286">SRX1521286</a></td>
       <td>2016-11-17</td>
-      <td><a href="http://dx.doi.org/10.1038/srep37302">10.1038/srep37302</a></td>
       <td>Sci Rep</td>
+      <td><a href="http://dx.doi.org/10.1038/srep37302">10.1038/srep37302</a></td>
+      <td>Genetic determination of the enhanced drought resistance of rice maintainer HuHan2B by pedigree breeding</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1521275">SRX1521275</a></td>
+      <td>2016-11-17</td>
+      <td>Sci Rep</td>
+      <td><a href="http://dx.doi.org/10.1038/srep37302">10.1038/srep37302</a></td>
       <td>Genetic determination of the enhanced drought resistance of rice maintainer HuHan2B by pedigree breeding</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1837757">SRX1837757</a></td>
       <td>2016-11-22</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.01760">10.3389/fpls.2016.01760</a></td>
       <td>Front Plant Sci</td>
+      <td><a href="http://dx.doi.org/10.3389/fpls.2016.01760">10.3389/fpls.2016.01760</a></td>
       <td>Identification of miRNAs Affecting the Establishment of Brassica Alboglabra Seedling</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2318970">SRX2318970</a></td>
       <td>2016-11-28</td>
-      <td><a href="http://dx.doi.org/10.3389/fmicb.2016.01893">10.3389/fmicb.2016.01893</a></td>
       <td>Front Microbiol</td>
+      <td><a href="http://dx.doi.org/10.3389/fmicb.2016.01893">10.3389/fmicb.2016.01893</a></td>
       <td>Long-Term Application of Bioorganic Fertilizers Improved Soil Biochemical Properties and Microbial Communities of an Apple Orchard Soil</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2037303">SRX2037303</a></td>
-      <td>2017-01-03</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3442-3">10.1186/s12864-016-3442-3</a></td>
-      <td>BMC Genomics</td>
-      <td>Comparative transcriptome analysis of two contrasting watermelon genotypes during fruit development and ripening</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2037189">SRX2037189</a></td>
-      <td>2017-01-03</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3442-3">10.1186/s12864-016-3442-3</a></td>
-      <td>BMC Genomics</td>
-      <td>Comparative transcriptome analysis of two contrasting watermelon genotypes during fruit development and ripening</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1948242">SRX1948242</a></td>
       <td>2017-01-05</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3398-3">10.1186/s12864-016-3398-3</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12864-016-3398-3">10.1186/s12864-016-3398-3</a></td>
       <td>Temperature-dependent sRNA transcriptome of the Lyme disease spirochete</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1948239">SRX1948239</a></td>
       <td>2017-01-05</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3398-3">10.1186/s12864-016-3398-3</a></td>
       <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12864-016-3398-3">10.1186/s12864-016-3398-3</a></td>
       <td>Temperature-dependent sRNA transcriptome of the Lyme disease spirochete</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1959536">SRX1959536</a></td>
-      <td>2017-01-09</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
-      <td>Front Plant Sci</td>
-      <td>Cellular and Molecular Changes Associated with Onion Skin Formation Suggest Involvement of Programmed Cell Death</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1959528">SRX1959528</a></td>
       <td>2017-01-09</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
       <td>Front Plant Sci</td>
+      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
+      <td>Cellular and Molecular Changes Associated with Onion Skin Formation Suggest Involvement of Programmed Cell Death</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1959536">SRX1959536</a></td>
+      <td>2017-01-09</td>
+      <td>Front Plant Sci</td>
+      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
       <td>Cellular and Molecular Changes Associated with Onion Skin Formation Suggest Involvement of Programmed Cell Death</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1959523">SRX1959523</a></td>
       <td>2017-01-09</td>
-      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
       <td>Front Plant Sci</td>
+      <td><a href="http://dx.doi.org/10.3389/fpls.2016.02031">10.3389/fpls.2016.02031</a></td>
       <td>Cellular and Molecular Changes Associated with Onion Skin Formation Suggest Involvement of Programmed Cell Death</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1715587">SRX1715587</a></td>
-      <td>2017-01-11</td>
-      <td><a href="http://dx.doi.org/10.1186/s12864-016-3402-y">10.1186/s12864-016-3402-y</a></td>
-      <td>BMC Genomics</td>
-      <td>An integrated analysis of QTL mapping and RNA sequencing provides further insights and promising candidates for pod number variation in rapeseed (Brassica napus L.)</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1830267">SRX1830267</a></td>
       <td>2017-01-11</td>
-      <td><a href="http://dx.doi.org/10.1186/s12920-016-0242-1">10.1186/s12920-016-0242-1</a></td>
       <td>BMC Med Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12920-016-0242-1">10.1186/s12920-016-0242-1</a></td>
       <td>Pregnant women carrying microcephaly foetuses and Zika virus contain potentially pathogenic microbes and parasites in their amniotic fluid</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2037183">SRX2037183</a></td>
       <td>2017-01-20</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0170330">10.1371/journal.pone.0170330</a></td>
       <td>PLoS One</td>
+      <td><a href="http://dx.doi.org/10.1371/journal.pone.0170330">10.1371/journal.pone.0170330</a></td>
       <td>Identification of microRNAs in Response to Drought in Common Wild Rice (Oryza rufipogon Griff.) Shoots and Roots</td>
     </tr>
     <tr>
       <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX1940816">SRX1940816</a></td>
       <td>2017-02-02</td>
-      <td><a href="http://dx.doi.org/10.1038/srep41829">10.1038/srep41829</a></td>
       <td>Sci Rep</td>
+      <td><a href="http://dx.doi.org/10.1038/srep41829">10.1038/srep41829</a></td>
       <td>Antennal transcriptomes of three tortricid moths reveal putative conserved chemosensory receptors for social and habitat olfactory cues</td>
     </tr>
     <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2403438">SRX2403438</a></td>
-      <td>2017-02-06</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0171739">10.1371/journal.pone.0171739</a></td>
-      <td>PLoS One</td>
-      <td>Identification and expression profile analysis of odorant binding protein and chemosensory protein genes in Bemisia tabaci MED by head transcriptome</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX2403439">SRX2403439</a></td>
-      <td>2017-02-06</td>
-      <td><a href="http://dx.doi.org/10.1371/journal.pone.0171739">10.1371/journal.pone.0171739</a></td>
-      <td>PLoS One</td>
-      <td>Identification and expression profile analysis of odorant binding protein and chemosensory protein genes in Bemisia tabaci MED by head transcriptome</td>
+      <td><a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRX375489">SRX375489</a></td>
+      <td>2017-02-28</td>
+      <td>BMC Genomics</td>
+      <td><a href="http://dx.doi.org/10.1186/s12864-017-3556-2">10.1186/s12864-017-3556-2</a></td>
+      <td>Response of microRNAs to cold treatment in the young spikes of common wheat</td>
     </tr>
   </tbody>
 </table>
-</center>
-</div>
+      </center>
+      <br> Source code available on <a href="https://github.com/WideOpen/datawatch">GitHub</a>.
+    </div>
+  </div>
+  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -649,6 +516,9 @@ Open Science Data Watch
   ga('send', 'pageview');
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
 </html>
