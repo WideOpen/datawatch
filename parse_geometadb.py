@@ -118,7 +118,7 @@ def update_metadb_stamp(dbcon, metadb):
 
 
 def main():
-    metadb = sqlite3.connect("rawdata/GEOmetadb.sqlite")
+    metadb = sqlite3.connect("metadata/GEOmetadb.sqlite")
     dbcon = sqlite3.connect("data/odw.sqlite")
 
     print "Parsing metadb..."
