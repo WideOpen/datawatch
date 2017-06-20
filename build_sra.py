@@ -10,6 +10,7 @@ import tqdm
 import sqlite3
 import re
 import argparse
+import json
 
 import GEOCacher
 
@@ -159,5 +160,14 @@ def update_html(df, sradb_timestamp):
 SRATIMESTAMP = sraDB.execute("select value from metaInfo where name='creation timestamp'").fetchall()[0][0]
 
 
+def prepare_data_json(df_private, meta_timestamp, update_date):
+    result = dict()
+    result["meta_timestamp"] = meta_timestamp
+    result["update_date"] = update_date
+    result["data"] = [row[1].to_dict() for row in df_private.iterrows()]
+    json.dump(result, open("private_sra.json", "w"))
+
+
 df = get_df(SRA_overdue)
 update_html(df, SRATIMESTAMP)
+prepare_data_json(df, SRATIMESTAMP, str(datetime.date.today()))
