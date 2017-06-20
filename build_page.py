@@ -1,15 +1,16 @@
+import sqlite3
+import re
+import argparse
+import json
+import datetime
 import pandas as pd
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import datetime
 import seaborn as sns
 from dateutil.parser import parse
 import tqdm
-import sqlite3
-import re
-import argparse
 
 import GEOCacher
 
@@ -196,6 +197,14 @@ def update_html(df, metadb_timestamp):
         f.write(final_html.encode("utf-8"))
 
 
+
+def prepare_data_json(df_private, meta_timestamp, update_date):
+    result = dict()
+    result["meta_timestamp"] = meta_timestamp
+    result["update_date"] = update_date
+    result["data"] = [row[1].to_dict() for row in df_private.iterrows()]
+    json.dump(result, open("private_geo.json", "w"))
+
 def main():
     parser = argparse.ArgumentParser(description='Build a page for datawatch')
 
@@ -214,6 +223,7 @@ def main():
         df_released.to_csv(args.output + "_released.csv", encoding='utf-8')
         graph_df.to_csv(args.output + "_graph.csv", encoding='utf-8')
 
+    prepare_data_json(df_private, meta_timestamp, str(datetime.date.today()))
     update_html(df_private, meta_timestamp)
     update_graph(graph_df)
 
