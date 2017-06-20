@@ -24,7 +24,12 @@ def get_date_by_query(metadb, query, gse):
 
 def get_released_date(metadb, gse):
     query = "select distinct status from gsm, gse_gsm where gsm.gsm = gse_gsm.gsm and gse_gsm.gse = ?"
-    return get_date_by_query(metadb, query, gse)
+    result = get_date_by_query(metadb, query, gse)
+    if result is None:
+        query2 = "select status from gse where gse=?"
+        return get_date_by_query(metadb, query2, gse)
+    else:
+        return result
 
 
 def get_submitted_date(metadb, gse):

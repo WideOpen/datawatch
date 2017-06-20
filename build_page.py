@@ -118,7 +118,7 @@ def load_dataframes(maxlag):
 def get_hidden_df(df):
     df = df.copy()
     oneday = datetime.timedelta(1)
-    onemonth = datetime.timedelta(3)
+    timestep = datetime.timedelta(3)
     x = []
     y = []
     c = datetime.date.today() - oneday
@@ -131,7 +131,7 @@ def get_hidden_df(df):
         mask2 = public > c + oneday
         x.append(c)
         y.append(np.count_nonzero(mask1 & mask2))
-        c -= onemonth
+        c -= timestep
 
     print "Current overdue: ", y[0]
 
